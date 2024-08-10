@@ -12,7 +12,10 @@ from django.contrib import auth
 from ravi.models import *
 from business.models import *
 from bhanu.models import Educationalloan
+from django.views.decorators.csrf import csrf_exempt
 
+
+@csrf_exempt
 def Login(request):
     if request.method == 'POST':#IF THE CONDITION IS TRUE IT SHOULD ENTER INTO THE IF CONDITION
        username = request.POST['username'] 
